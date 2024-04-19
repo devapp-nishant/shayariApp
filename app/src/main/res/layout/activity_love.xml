@@ -3,17 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background = "@color/white"
-    tools:context=".Activity.AllShayariActivity">
+    tools:context=".Activity.LoveActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/all_shayari_toolbar"
+            android:id="@+id/love_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/theme_color"
@@ -24,7 +23,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/allShayariRecView"
+        android:id="@+id/loveRecView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:listitem="@layout/shayari_item"/>

@@ -1,4 +1,4 @@
-package com.rsva.englishlovesharariapp;
+package com.rsva.englishlovesharariapp.Model;
 
 public class ShayariCategoryModel {
     private String shayariCatName;

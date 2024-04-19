@@ -1,10 +1,9 @@
-package com.rsva.englishlovesharariapp;
+package com.rsva.englishlovesharariapp.Adapter;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
-import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +14,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.rsva.englishlovesharariapp.Model.ShayariModel;
+import com.rsva.englishlovesharariapp.R;
 
 import java.util.List;
 
