@@ -1,4 +1,4 @@
-package com.rsva.englishlovesharariapp.Model;
+package com.rsva.englishloveshayariapp.Model;
 
 public class ShayariModel {
     private String shayariText;

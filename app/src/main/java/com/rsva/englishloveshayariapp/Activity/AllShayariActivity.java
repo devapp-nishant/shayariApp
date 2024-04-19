@@ -1,13 +1,13 @@
-package com.rsva.englishlovesharariapp.Activity;
+package com.rsva.englishloveshayariapp.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.os.Bundle;
 
-import com.rsva.englishlovesharariapp.Adapter.ShayariAdapter;
-import com.rsva.englishlovesharariapp.Model.ShayariModel;
-import com.rsva.englishlovesharariapp.databinding.ActivityAllShayariBinding;
+import com.rsva.englishloveshayariapp.Adapter.ShayariAdapter;
+import com.rsva.englishloveshayariapp.Model.ShayariModel;
+import com.rsva.englishloveshayariapp.databinding.ActivityAllShayariBinding;
 
 import java.util.ArrayList;
 import java.util.List;

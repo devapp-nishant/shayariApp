@@ -1,10 +1,9 @@
-package com.rsva.englishlovesharariapp.Adapter;
+package com.rsva.englishloveshayariapp.Adapter;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +14,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.rsva.englishlovesharariapp.Model.ShayariModel;
-import com.rsva.englishlovesharariapp.R;
+import com.rsva.englishloveshayariapp.Model.ShayariModel;
+import com.rsva.englishloveshayariapp.R;
 
 import java.util.List;
 
@@ -42,26 +41,33 @@ public class ShayariAdapter extends RecyclerView.Adapter<ShayariAdapter.ShayariV
         holder.shayariItemText.setText(shayariModel.get(position).getShayariText());
 
         holder.sharebtn.setOnClickListener(v -> {
-            Intent share = new Intent(Intent.ACTION_SEND);
-            share.setType("text/plane");
-            share.putExtra(Intent.EXTRA_INTENT, shayariModel.get(position).getShayariText());
-            context.startActivity(share);
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+
+            // setting type of data shared as text
+            shareIntent.setType("text/plain");
+            shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject Here");
+
+            // Adding the text to share using putExtra
+            shareIntent.putExtra(Intent.EXTRA_TEXT, shayariModel.get(position).getShayariText());
+            context.startActivity(Intent.createChooser(shareIntent, "Share Via"));
         });
+
         holder.copyBtn.setOnClickListener(v -> {
             ClipboardManager clipboardManager = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
             ClipData data = (ClipData) ClipData.newPlainText("text", shayariModel.get(position).getShayariText());
             clipboardManager.setPrimaryClip(data);
             Toast.makeText(context, "Text Copied!", Toast.LENGTH_SHORT).show();
         });
+
         holder.whatsappBtn.setOnClickListener(v -> {
+            Intent whatsappIntent = new Intent(Intent.ACTION_SEND);
+            whatsappIntent.setType("text/plain");
+            whatsappIntent.setPackage("com.whatsapp");
+            whatsappIntent.putExtra(Intent.EXTRA_TEXT, shayariModel.get(position).getShayariText());
             try {
-                Intent whatsappIntent = new Intent(Intent.ACTION_SEND);
-                whatsappIntent.setType("text/plane");
-                whatsappIntent.setPackage("com.whatsapp");
-                whatsappIntent.putExtra(Intent.EXTRA_INTENT, shayariModel.get(position).getShayariText());
                 context.startActivity(whatsappIntent);
-            }catch (Exception e){
-                Log.e("Whataspp", e.getLocalizedMessage());
+            } catch (android.content.ActivityNotFoundException ex) {
+                Toast.makeText(context, "Whatsapp have not been installed.", Toast.LENGTH_SHORT).show();
             }
         });
     }

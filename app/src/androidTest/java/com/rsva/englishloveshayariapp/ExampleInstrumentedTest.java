@@ -1,4 +1,4 @@
-package com.rsva.englishlovesharariapp;
+package com.rsva.englishloveshayariapp;
 
 import android.content.Context;
 

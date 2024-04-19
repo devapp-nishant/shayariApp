@@ -1,4 +1,4 @@
-package com.rsva.englishlovesharariapp.Adapter;
+package com.rsva.englishloveshayariapp.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,9 +9,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.rsva.englishlovesharariapp.Activity.AllShayariActivity;
-import com.rsva.englishlovesharariapp.Model.ShayariCategoryModel;
-import com.rsva.englishlovesharariapp.R;
+import com.rsva.englishloveshayariapp.Activity.AllShayariActivity;
+import com.rsva.englishloveshayariapp.Model.ShayariCategoryModel;
+import com.rsva.englishloveshayariapp.R;
 
 import java.util.List;
 

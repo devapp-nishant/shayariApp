@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activity.SadActivity">
+    tools:context=".Activity.CoupleActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/sad_toolbar"
+            android:id="@+id/coupleToolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/theme_color"
@@ -23,7 +23,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/sadRecView"
+        android:id="@+id/coupleRecView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:listitem="@layout/shayari_item"/>
